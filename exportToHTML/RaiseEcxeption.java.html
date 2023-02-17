@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>RaiseEcxeption.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+RaiseEcxeption.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.net.SocketException</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.nio.file.AccessDeniedException</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.rmi.server.ExportException</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">RaiseEcxeption {</span>
+    <span class="s0">public static void </span><span class="s1">raiseExceptoin(Integer ExceptionNumber) </span><span class="s0">throws </span><span class="s1">SocketException</span><span class="s0">, </span><span class="s1">ClassNotFoundException</span><span class="s0">, </span><span class="s1">AccessDeniedException</span><span class="s0">, </span><span class="s1">ExportException {</span>
+        <span class="s0">switch </span><span class="s1">(ExceptionNumber) {</span>
+            <span class="s0">case </span><span class="s2">1</span><span class="s1">:</span>
+                <span class="s0">throw new </span><span class="s1">SocketException()</span><span class="s0">;</span>
+            <span class="s0">case </span><span class="s2">2</span><span class="s1">:</span>
+                <span class="s0">throw new </span><span class="s1">ClassNotFoundException()</span><span class="s0">;</span>
+            <span class="s0">case </span><span class="s2">3</span><span class="s1">:</span>
+                <span class="s0">throw new </span><span class="s1">AccessDeniedException(</span><span class="s0">null</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s0">case </span><span class="s2">4</span><span class="s1">:</span>
+                <span class="s0">throw new </span><span class="s1">ExportException(</span><span class="s0">null</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s0">default</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;░░░░░░░░░░░░░░░░░░░░░▄▄▄░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░░░░░░░░░░░░▄█████▄░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░░░░░░░░░░░░████████▄</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░░░░░░░░░░░░███░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░░░░░░░░░░░░███░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░░░░░░░░░░░░███░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░░░░░░░░░░░░███░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░░░░░░░░░░░░███░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░░░░░░▄▄▄▄▄████░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░▄▄████████████▄░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░▄▄██████████████████░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ▄▄██████████████████████░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░▀▀████████████████████▀░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░▀█████████████████▀░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░▀▀███████████▀▀░░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░░▀███▀▀██▀░░░░░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░░░█░░░░██░░░░░░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░░░░░░░░█░░░░█░░░░░░░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                        <span class="s3">&quot;           ░░░▄▄▄▄███████▄███████▄▄▄▄░░&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public </span><span class="s1">String raiseException(Integer ExN) {</span>
+        <span class="s0">try </span><span class="s1">{</span>
+            <span class="s0">try </span><span class="s1">{</span>
+                <span class="s0">try </span><span class="s1">{</span>
+                    <span class="s0">try </span><span class="s1">{</span>
+                        <span class="s1">raiseExceptoin(ExN)</span><span class="s0">;</span>
+                    <span class="s1">} </span><span class="s0">catch </span><span class="s1">(SocketException var3) {</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;Error: &quot; </span><span class="s1">+ var3)</span><span class="s0">;</span>
+                    <span class="s1">}</span>
+                <span class="s1">} </span><span class="s0">catch </span><span class="s1">(ClassNotFoundException var4) {</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;Error: &quot; </span><span class="s1">+ var4)</span><span class="s0">;</span>
+                <span class="s1">}</span>
+            <span class="s1">} </span><span class="s0">catch </span><span class="s1">(AccessDeniedException var5) {</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;Error: &quot; </span><span class="s1">+ var5)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s0">catch </span><span class="s1">(ExportException var6) {</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Error: &quot; </span><span class="s1">+ var6)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">return </span><span class="s3">&quot;░░░░░░░░░░░░░░░░░░░░░▄▄▄░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░░░░░░░░░░░░▄█████▄░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░░░░░░░░░░░░████████▄</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░░░░░░░░░░░░███░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░░░░░░░░░░░░███░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░░░░░░░░░░░░███░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░░░░░░░░░░░░███░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░░░░░░░░░░░░███░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░░░░░░▄▄▄▄▄████░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░▄▄████████████▄░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░▄▄██████████████████░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;▄▄██████████████████████░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░▀▀████████████████████▀░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░▀█████████████████▀░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░▀▀███████████▀▀░░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░░▀███▀▀██▀░░░░░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░░░█░░░░██░░░░░░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░░░░░░░░█░░░░█░░░░░░░░░░░░</span><span class="s0">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;░░░▄▄▄▄███████▄███████▄▄▄▄░░&quot;</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+
+
+
+
+</pre>
+</body>
+</html>
